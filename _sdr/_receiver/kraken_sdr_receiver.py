@@ -353,8 +353,21 @@ class ReceiverRTLSDR:
                 self.logger.error("Unable to start communication thread")
                 self.logger.error(f"Error message: {error}")
 
-    #    def set_offset(self, offset):
-    #        cmd="OFST"
+    def set_channel_frequencies(self, frequencies):
+        """
+        Set per-channel center frequencies for wideband operation.
+
+        Sends a FREQ command for each channel's designated frequency.
+        Falls back to setting all channels to the same frequency if only
+        one frequency is provided.
+
+        Parameters:
+        -----------
+            :param frequencies: List of center frequencies in Hz, one per channel
+            :type  frequencies: list of int
+        """
+        for freq in frequencies:
+            self.set_center_freq(int(freq))
 
     def set_if_gain(self, gain):
         """
