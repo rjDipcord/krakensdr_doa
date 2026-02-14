@@ -1,0 +1,24 @@
+# Runtime
+ui.log
+server.log
+_share/
+settings.json*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Legacy / unused
+_android_web/
+
+# Patches / backups
+*.patch
+*.bak
