@@ -16,8 +16,10 @@ __pycache__/
 *.swp
 *.swo
 
-# Legacy / unused
+# Excluded from this repo
+_nodejs/
 _android_web/
+util/setup_init.sh
 
 # Patches / backups
 *.patch
